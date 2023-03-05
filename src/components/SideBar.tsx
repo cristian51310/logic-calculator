@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import {DangerButton} from "./Button"
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { DangerButton } from './Button'
 
-function SideBarItem({ to, title }) {
+function SideBarItem ({ to, title }) {
   return (
     <React.Fragment>
       <li>
         <NavLink
           to={to}
-          className={({ isActive }) => (isActive ? "odd:text-green-600 first:font-bold" : "odd:text-black")}
+          className={({ isActive }) => (isActive ? 'odd:text-green-600 first:font-bold' : 'odd:text-black')}
         >
           <div className='w-full bg-white mb-5 h-16 rounded-lg grid place-items-center'>{title}</div>
         </NavLink>
@@ -17,7 +17,7 @@ function SideBarItem({ to, title }) {
   )
 }
 
-function NavBar() {
+function NavBar () {
   return (
     <React.Fragment>
       <nav className="flex h-screen">
@@ -50,7 +50,7 @@ function NavBar() {
               title='XOR'
             />
           </ul>
-          
+
           <div className="flex align-bottom mt-32 w-full">
             <NavLink
               to='/login'
@@ -60,15 +60,15 @@ function NavBar() {
                 titulo={'Cerrar Sesion'}
               />
             </NavLink>
-            
+
           </div>
-          
+
         </div>
 
       </nav>
 
     </React.Fragment>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar

@@ -1,21 +1,23 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import { PrimaryButton } from "./Button"
-import { SwitchBeta, LanguageSwitch } from "./Switch"
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { PrimaryButton } from './Button'
+import { SwitchBeta, LanguageSwitch } from './Switch'
+import { useTranslation } from 'react-i18next'
 
-export default function LateralSection() {
+export default function LateralSection () {
+  const { t } = useTranslation()
   return (
     <React.Fragment>
       <div className="relative overflow-hidden flex w-5/12 bg-gradient-to-tr from-blue-400 to-purple-300 dark:from-blue-900 dark:to-purple-800 justify-around items-center text-gray-800/90 dark:text-white transition duration-300">
 
         <div>
-          <h1 className=" font-bold text-4xl font-sans mt-4">Calculadora logica</h1>
-          <p className=" text-lg mt-2 mb-10 text-center">La mejor calculadora preposicional</p>
+          <h1 className=" font-bold text-4xl font-sans mt-4">{t('lateral_section_title')}</h1>
+          <p className=" text-lg mt-2 mb-10 text-center">{t('lateral_section_subtitle')}</p>
 
           <NavLink
             to={'/'}>
             <PrimaryButton
-              titulo={'Entrar como invitado'}
+              titulo={t('enter_as_guest')}
             />
           </NavLink>
 

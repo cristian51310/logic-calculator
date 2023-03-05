@@ -1,7 +1,9 @@
-import React, { Children } from "react"
-import { NavLink } from "react-router-dom"
+import { useTranslation } from 'react-i18next'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export default function Formulario({ children }) {
+export default function Formulario ({ children }) {
+  const { t } = useTranslation()
   return (
     <React.Fragment>
       <form action="" className="grid gap-3">
@@ -10,11 +12,11 @@ export default function Formulario({ children }) {
 
         <div className="relative">
           <p className="text-sm ml-2">
-            <span>No tienes una cuenta? </span>
+            <span>{t('you_have_an_account')}</span>
             <NavLink
               to={'/sign-up'}
             >
-              <span className="font-bold cursor-pointer hover:text-blue-600 hover:underline">Registrate</span>
+              <span className="font-bold cursor-pointer hover:text-blue-600 hover:underline dark:hover:text-blue-300">{t('sign_up')}</span>
             </NavLink>
           </p>
         </div>

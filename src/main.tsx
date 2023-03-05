@@ -12,11 +12,13 @@ import { Nor } from './pages/Compuertas/Nor';
 import { Not } from './pages/Compuertas/Not';
 import { Or } from './pages/Compuertas/Or';
 
+import "./i18n"
+
 const root = createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
        <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<App> <Not /></App>} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<Signup />} />
 

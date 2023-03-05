@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-export default function FrameFormulario({ children, titulo, subtitulo }) {
+export default function FrameFormulario ({ children, titulo, subtitulo }) {
   return (
     <React.Fragment>
       <div className="flex w-7/12 justify-center py-10 items-center bg-white dark:bg-slate-800 transition duration-100">

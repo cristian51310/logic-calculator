@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-export function SimpleTable({numeros}){
+export function SimpleTable ({ numeros }) {
   return (
     <table className=" border-spacing-y-1 text-gray-100 border-separate space-y-6 text-md">
       <thead className="bg-gradient-to-tr from-blue-800 to-purple-700  text-white">
@@ -31,7 +31,7 @@ export function SimpleTable({numeros}){
   )
 }
 
-export function Table({numeros}){
+export function Table ({ numeros }) {
   return (
     <table className=" border-spacing-y-1 text-gray-100 border-separate space-y-6 text-md">
       <thead className="bg-gradient-to-tr from-blue-800 to-purple-700  text-white">

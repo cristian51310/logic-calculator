@@ -2,7 +2,6 @@ import { Button } from '@/components/Button'
 import Formulario from '@/components/Formulario'
 import FrameFormulario from '@/components/frameFormulario'
 import LateralSection from '@/components/LateralSection'
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Input from '../components/Input'
 import { IoPeopleSharp, IoKey, IoIdCard, IoAtCircle } from 'react-icons/io5'
@@ -12,9 +11,8 @@ export default function Signup () {
   const { t } = useTranslation()
 
   return (
-    <React.Fragment>
-
-      <div className="h-screen flex">
+    <>
+      <div className='h-screen flex'>
 
         <LateralSection />
 
@@ -26,26 +24,26 @@ export default function Signup () {
             <Input
               placeholder={t('name_label')}
               name='name'
-              icon={<IoIdCard className="w-6 h-6"/>}
+              icon={<IoIdCard className='w-6 h-6' />}
             />
             <Input
               placeholder={t('user_label')}
               name='user'
-              icon={<IoPeopleSharp className="w-6 h-6"/>}
+              icon={<IoPeopleSharp className='w-6 h-6' />}
             />
             <Input
               placeholder={t('email_label')}
               name='email'
-              icon={<IoAtCircle className="w-6 h-6"/>}
+              icon={<IoAtCircle className='w-6 h-6' />}
             />
             <Input
               placeholder={t('password_label')}
               name='pass'
-              icon={<IoKey className="w-6 h-6"/>}
+              icon={<IoKey className='w-6 h-6' />}
             />
 
             <NavLink
-              to={'/login'}
+              to='/login'
             >
               <Button
                 titulo={t('sign_up')}
@@ -54,8 +52,7 @@ export default function Signup () {
 
           </Formulario>
         </FrameFormulario>
-
       </div>
-    </React.Fragment>
+    </>
   )
 }

@@ -11,9 +11,9 @@ import { useTranslation } from 'react-i18next'
 export const Login = () => {
   const { t } = useTranslation()
   return (
-    <React.Fragment>
+    <>
 
-      <div className="h-screen flex">
+      <div className='h-screen flex'>
 
         <LateralSection />
 
@@ -25,16 +25,16 @@ export const Login = () => {
             <Input
               placeholder={t('user_label')}
               name='user'
-              icon={<IoPeopleSharp className="w-6 h-6"/>}
+              icon={<IoPeopleSharp className='w-6 h-6' />}
             />
             <Input
               placeholder={t('password_label')}
               name='pass'
-              icon={<IoKey className="w-6 h-6"/>}
+              icon={<IoKey className='w-6 h-6' />}
             />
 
             <NavLink
-              to={'/'}
+              to='/'
             >
               <Button
                 titulo={t('log_in')}
@@ -45,6 +45,6 @@ export const Login = () => {
         </FrameFormulario>
 
       </div>
-    </React.Fragment>
+    </>
   )
 }

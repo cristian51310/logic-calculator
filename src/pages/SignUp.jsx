@@ -1,5 +1,4 @@
 import { Button } from '@/components/Button'
-import Formulario from '@/components/Formulario'
 import FrameFormulario from '@/components/frameFormulario'
 import LateralSection from '@/components/LateralSection'
 import { NavLink } from 'react-router-dom'
@@ -11,48 +10,45 @@ export default function Signup () {
   const { t } = useTranslation()
 
   return (
-    <>
-      <div className='h-screen flex'>
 
-        <LateralSection />
+    <div className='h-screen flex'>
 
-        <FrameFormulario
-          titulo={t('sign_up')}
-          subtitulo={t('sign_up_welcome')}
-        >
-          <Formulario>
-            <Input
-              placeholder={t('name_label')}
-              name='name'
-              icon={<IoIdCard className='w-6 h-6' />}
-            />
-            <Input
-              placeholder={t('user_label')}
-              name='user'
-              icon={<IoPeopleSharp className='w-6 h-6' />}
-            />
-            <Input
-              placeholder={t('email_label')}
-              name='email'
-              icon={<IoAtCircle className='w-6 h-6' />}
-            />
-            <Input
-              placeholder={t('password_label')}
-              name='pass'
-              icon={<IoKey className='w-6 h-6' />}
-            />
+      <LateralSection />
 
-            <NavLink
-              to='/login'
-            >
-              <Button
-                titulo={t('sign_up')}
-              />
-            </NavLink>
+      <FrameFormulario
+        titulo={t('sign_up')}
+        subtitulo={t('sign_up_welcome')}
+      >
 
-          </Formulario>
-        </FrameFormulario>
-      </div>
-    </>
+        <Input
+          placeholder={t('name_label')}
+          name='name'
+          icon={<IoIdCard className='w-6 h-6' />}
+        />
+        <Input
+          placeholder={t('user_label')}
+          name='user'
+          icon={<IoPeopleSharp className='w-6 h-6' />}
+        />
+        <Input
+          placeholder={t('email_label')}
+          name='email'
+          icon={<IoAtCircle className='w-6 h-6' />}
+        />
+        <Input
+          placeholder={t('password_label')}
+          name='pass'
+          icon={<IoKey className='w-6 h-6' />}
+        />
+
+        <NavLink to='/login'>
+          <Button
+            titulo={t('sign_up')}
+          />
+        </NavLink>
+
+      </FrameFormulario>
+    </div>
+
   )
 }

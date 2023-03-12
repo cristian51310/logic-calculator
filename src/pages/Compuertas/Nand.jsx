@@ -9,13 +9,10 @@ export const Nand = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>Nand</h1>
-        <Table
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <Table
+        numeros={numeros}
+      />
+    </div>
   )
 }

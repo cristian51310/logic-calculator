@@ -7,13 +7,10 @@ export const Not = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>Nand</h1>
-        <SimpleTable
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <SimpleTable
+        numeros={numeros}
+      />
+    </div>
   )
 }

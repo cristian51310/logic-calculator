@@ -21,7 +21,9 @@ i18n.use(initReactI18next).init({
         user_label: "User",
         password_label: "Password",
         name_label: "Name",
-        email_label: "Email"
+        email_label: "Email",
+        hello_label: "Hello",
+        logout_label: "Log Out"
       },
     },
     es: {
@@ -37,7 +39,9 @@ i18n.use(initReactI18next).init({
         user_label: "Usuario",
         password_label: "Contraseña",
         name_label: "Nombre",
-        email_label: "Correo Electronico"
+        email_label: "Correo Electronico",
+        hello_label: "Hola",
+        logout_label: "Cerrar Sesion"
       },
     },
   },

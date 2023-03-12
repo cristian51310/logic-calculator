@@ -9,13 +9,10 @@ export const And = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>And</h1>
-        <Table
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <Table
+        numeros={numeros}
+      />
+    </div>
   )
 }

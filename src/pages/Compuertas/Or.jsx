@@ -9,13 +9,10 @@ export const Or = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>Or</h1>
-        <Table
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <Table
+        numeros={numeros}
+      />
+    </div>
   )
 }

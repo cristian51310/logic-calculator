@@ -9,13 +9,10 @@ export const Nor = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>Nor</h1>
-        <Table
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <Table
+        numeros={numeros}
+      />
+    </div>
   )
 }

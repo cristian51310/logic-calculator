@@ -1,10 +1,7 @@
-import NavBar from '../components/SideBar'
-
-export const App = ({ children }) => {
+export const Calculator = ({ children }) => {
   return (
     <>
       <div className='flex'>
-        <NavBar />
 
         {/* Seccion de la calculadora */}
 
@@ -17,4 +14,4 @@ export const App = ({ children }) => {
   )
 }
 
-export default App
+export default Calculator

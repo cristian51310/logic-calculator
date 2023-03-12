@@ -9,13 +9,10 @@ export const Xor = () => {
   ]
 
   return (
-    <>
-      <div>
-        <h1>Xor</h1>
-        <Table
-          numeros={numeros}
-        />
-      </div>
-    </>
+    <div>
+      <Table
+        numeros={numeros}
+      />
+    </div>
   )
 }

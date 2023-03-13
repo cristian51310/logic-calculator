@@ -1,4 +1,4 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function SimpleTable ({ numeros }) {
   return (
@@ -32,13 +32,17 @@ export function SimpleTable ({ numeros }) {
 }
 
 export function Table ({ numeros }) {
+  const { t } = useTranslation()
   return (
     <table className=' border-spacing-y-1 text-gray-100 border-separate space-y-6 text-md'>
       <thead className='bg-gradient-to-tr from-blue-800 to-purple-700  text-white'>
+        <tr>
+          <th colSpan='3' className='p-3 px-9 col-span-3 rounded-t-md'>{t('table_title')}</th>
+        </tr>
         <tr className='text-center'>
-          <th className='p-3 px-9 rounded-tl-md'>A</th>
+          <th className='p-3 px-9 '>A</th>
           <th className='p-3 px-9 '>B</th>
-          <th className='p-3 px-9 rounded-tr-md '>Out</th>
+          <th className='p-3 px-9 '>Out</th>
         </tr>
       </thead>
       <tbody>

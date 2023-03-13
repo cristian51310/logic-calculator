@@ -23,7 +23,8 @@ i18n.use(initReactI18next).init({
         name_label: "Name",
         email_label: "Email",
         hello_label: "Hello",
-        logout_label: "Log Out"
+        logout_label: "Log Out",
+        table_title: "Truth Table"
       },
     },
     es: {
@@ -41,7 +42,8 @@ i18n.use(initReactI18next).init({
         name_label: "Nombre",
         email_label: "Correo Electronico",
         hello_label: "Hola",
-        logout_label: "Cerrar Sesion"
+        logout_label: "Cerrar Sesion",
+        table_title: "Tabla de verdad"
       },
     },
   },

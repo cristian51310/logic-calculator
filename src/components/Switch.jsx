@@ -75,12 +75,12 @@ export const LanguageSwitch = ({ position }) => {
 
   const LANGUAGES = [
     {
-      icon: <span class='fi fi-mx' />,
+      icon: <span className='fi fi-mx' />,
       text: 'spanish',
       code: 'es'
     },
     {
-      icon: <span class='fi fi-us' />,
+      icon: <span className='fi fi-us' />,
       text: 'english',
       code: 'en'
     }

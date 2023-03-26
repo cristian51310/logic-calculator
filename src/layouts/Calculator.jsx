@@ -4,7 +4,7 @@ import routes from '@/routes'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 
-export default function Admin (props) {
+export default function Admin () {
   const location = useLocation()
   const [currentRoute, setCurrentRoute] = React.useState('Main Dashboard')
 
@@ -41,22 +41,14 @@ export default function Admin (props) {
   return (
     <div className='flex h-full w-full'>
       <Sidebar open />
-      {/* Navbar & Main Content */}
-      <div className='h-full w-full bg-lightPrimary dark:!bg-navy-900'>
-        {/* Main Content */}
-        <main className='px-[12px] h-screen bg-white dark:bg-slate-800 flex-none transition-all md:pr-2 xl:pl-[298px]'>
-          {/* Routes */}
+      <div className='w-full '>
+        <main className='px-[12px] h-full bg-white dark:bg-slate-800 flex-none transition-all pr-2 pl-[300px]'>
           <div className='h-full'>
-            <Navbar
-              brandText={currentRoute}
-            />
-            <div className='pt-8 mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2'>
+            <Navbar brandText={currentRoute} />
+            <div className='pt-8 mx-auto mb-auto h-full min-h-[84vh] p-2'>
               <Routes>
                 {getRoutes(routes)}
-                <Route
-                  path='/'
-                  element={<Navigate to='/admin/default' replace />}
-                />
+                <Route path='/' element={<Navigate to='/admin/default' replace />} />
               </Routes>
             </div>
           </div>

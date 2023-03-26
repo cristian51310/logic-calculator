@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { Table } from '@/components/Table'
 import { RocketSwitch } from '@/components/RocketSwitch'
-import bulbOn from '../../components/LigthBulb/bulb_on.jpg'
-import bulbOff from '../../components/LigthBulb/bulb_off.jpg'
+import bulbOn from '../../assets/bulb_on.jpg'
+import bulbOff from '../../assets/bulb_off.jpg'
 import { changeLanguage } from 'i18next'
 
 export const And = () => {
@@ -14,15 +14,13 @@ export const And = () => {
   ]
 
   return (
-    <div>
+    <div className='flex gap-7'>
       <Table
         numeros={numeros}
       />
 
-      <div className='flex mt-5 mb-5 gap-7'>
-        <RocketSwitch />
-        <RocketSwitch />
-      </div>
+      <RocketSwitch />
+      <RocketSwitch />
 
       <div className='w-40'>
         <img src={bulbOff} alt='' id='bulbContainer' />

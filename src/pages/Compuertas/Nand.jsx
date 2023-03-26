@@ -9,7 +9,7 @@ export const Nand = () => {
   ]
 
   return (
-    <div>
+    <div className='flex gap-7'>
       <Table
         numeros={numeros}
       />

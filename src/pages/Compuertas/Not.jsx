@@ -7,7 +7,7 @@ export const Not = () => {
   ]
 
   return (
-    <div>
+    <div className='flex gap-7'>
       <SimpleTable
         numeros={numeros}
       />

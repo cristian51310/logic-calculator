@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom'
 import avatar from '../assets/avatar4.png'
 import Dropdown from './Dropdown'
-import { SwitchBeta, LanguageSwitch } from './Switch'
+import { ThemeSwitch, LanguageSwitch } from './Switch'
 import { useTranslation } from 'react-i18next'
 
 const Navbar = (props) => {
@@ -22,9 +22,9 @@ const Navbar = (props) => {
         </p>
       </div>
 
-      <div className='relative flex h-[68px] flex-grow items-center justify-around rounded-xl bg-white dark:bg-slate-600 px-1 py-1 md:flex-grow-0 xl:w-fit gap-2'>
+      <div className='relative flex h-[68px] flex-grow-0 items-center justify-around rounded-xl bg-white dark:bg-slate-600 px-1 py-1 gap-2'>
         <div className='flex h-full items-center rounded-full bg-lightPrimary text-navy-700' />
-        <SwitchBeta />
+        <ThemeSwitch />
         <LanguageSwitch />
         <Dropdown
           button={
@@ -40,12 +40,12 @@ const Navbar = (props) => {
                 <p className='text-md font-bold mb-1 dark:text-gray-800'>
                   👋 {t('hello_label')}, Adela
                 </p>
-                <a
-                  href=' '
-                  className='mt-3 text-md font-medium text-red-500 hover:text-red-600'
-                >
-                  {t('logout_label')}
-                </a>
+                <Link to='/auth/login'>
+                  <p className='mt-3 text-md font-medium text-red-500 hover:text-red-600'>
+                    {t('logout_label')}
+                  </p>
+                </Link>
+
               </div>
             </div>
           }

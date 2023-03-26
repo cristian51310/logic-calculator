@@ -9,7 +9,7 @@ export const Or = () => {
   ]
 
   return (
-    <div>
+    <div className='flex gap-7'>
       <Table
         numeros={numeros}
       />

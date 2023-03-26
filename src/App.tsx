@@ -1,19 +1,17 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
+import CalculatorLayout from './layouts/Calculator';
+import { Login } from './pages/LogIn';
 import Signup from './pages/SignUp';
-import { Login } from './pages/Login';
-import AdminLayout from './layouts/admin';
-import AuthLayout from './layouts/auth';
 
 function App() {
   return (
     <Routes>
-      <Route path='admin/*' element={<AdminLayout />} />
-      <Route path='auth/*' element={<AuthLayout />} />
-      <Route path="/" element={<Navigate to='/admin' replace />} />
+      <Route path='admin/*' element={<CalculatorLayout />} />
 
-      <Route path="/login" element={<Login />} />
-      <Route path="/sign-up" element={<Signup />} />
+      <Route path='auth/login' element={<Login/>} />
+      <Route path='auth/signup' element={<Signup/>} />
 
+      <Route path="/" element={<Navigate to='/auth/login' replace />} />
     </Routes>
   )
 }

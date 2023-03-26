@@ -1,11 +1,9 @@
-/* eslint-disable import/no-absolute-path */
-
 import { useEffect, useState } from 'react'
 import { IoMoon, IoSunny } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
-import '/node_modules/flag-icons/css/flag-icons.min.css'
+import '../../node_modules/flag-icons/css/flag-icons.min.css'
 
-export const SwitchBeta = ({ position }) => {
+export const ThemeSwitch = ({ position }) => {
   const [theme, setTheme] = useState(
     window.localStorage.getItem('theme') ? window.localStorage.getItem('theme') : 'system'
   )

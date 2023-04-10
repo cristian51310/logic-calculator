@@ -12,17 +12,6 @@ export function PrimaryButton ({ titulo }) {
   )
 }
 
-export function DangerButton ({ titulo }) {
-  return (
-    <button
-      type='button'
-      className='block bg-red-600 hover:text-gray-200 text-white py-2 px-3 rounded-lg font-semibold hover:scale-105 transition-all duration-200 w-full shadow-lg shadow-red-500/80 hover:shadow-red-600/80 my-3 text-md'
-    >
-      {titulo}
-    </button>
-  )
-}
-
 export function Button ({ titulo }) {
   return (
     <button

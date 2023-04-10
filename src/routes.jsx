@@ -16,43 +16,37 @@ import {
 const routes = [
   {
     name: 'And',
-    layout: '/admin',
-    path: 'and',
+    path: '/admin/and',
     icon: <MdHome className='h-6 w-6' />,
     component: <And />
   },
   {
     name: 'Nand',
-    layout: '/admin',
-    path: 'nand',
+    path: '/admin/nand',
     icon: <MdAssignmentInd className='h-6 w-6' />,
     component: <Nand />
   },
   {
     name: 'Nor',
-    layout: '/admin',
-    path: 'nor',
+    path: '/admin/nor',
     icon: <MdAssignmentInd className='h-6 w-6' />,
     component: <Nor />
   },
   {
     name: 'Not',
-    layout: '/admin',
     icon: <MdContentPaste className='h-6 w-6' />,
-    path: 'not',
+    path: '/admin/not',
     component: <Not />
   },
   {
     name: 'Or',
-    layout: '/admin',
-    path: 'or',
+    path: '/admin/or',
     icon: <MdPerson className='h-6 w-6' />,
     component: <Or />
   },
   {
     name: 'Xor',
-    layout: '/admin',
-    path: 'xor',
+    path: '/admin/xor',
     icon: <MdPerson className='h-6 w-6' />,
     component: <Xor />
   }

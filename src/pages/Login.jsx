@@ -1,4 +1,3 @@
-import Input from '../components/Input'
 import Formulario from '@/components/Formulario'
 import { Button } from '@/components/Button'
 import { NavLink } from 'react-router-dom'
@@ -12,19 +11,17 @@ export const Login = () => {
 
       <Formulario titulo={t('log_in')} subtitulo={t('log_in_welcome')}>
 
-        <Input
-          placeholder={t('user_label')}
-          name='user'
-          icon={<IoPeopleSharp className='w-6 h-6' />}
-        />
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoPeopleSharp className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='user' placeholder={t('user_label')} />
+        </div>
 
-        <Input
-          placeholder={t('password_label')}
-          name='pass'
-          icon={<IoKey className='w-6 h-6' />}
-        />
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoKey className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='user' placeholder={t('password_label')} />
+        </div>
 
-        <NavLink to='/admin'>
+        <NavLink to='/admin/and'>
           <Button titulo={t('log_in')} />
         </NavLink>
 

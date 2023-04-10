@@ -45,6 +45,11 @@ export const ThemeSwitch = ({ position }) => {
     }
   }, [theme])
 
+  const setThemeSwitch = (text) => {
+    setTheme(text)
+    window.location.reload()
+  }
+
   return (
     <div className={position}>
       <div className='flex flex-row justify-center items-center w-36 h-14 bg-blue-500 dark:bg-yellow-500 rounded-md text-gray-100 shadow-lg shadow-blue-500/80 dark:shadow-yellow-400/60 transition duration-300 cursor-pointer'>
@@ -52,7 +57,7 @@ export const ThemeSwitch = ({ position }) => {
           options?.map(({ icon, text }) => (
             <div
               key={text}
-              onClick={() => setTheme(text)}
+              onClick={() => setThemeSwitch(text)}
               className={`w-14 h-10 leading-9 text-2xl rounded-md m-1 grid place-items-center transition duration-300 ${theme === text && 'text-yellow-400 dark:text-blue-600 bg-blue-600 dark:bg-yellow-600'}`}
             >
               {icon}
@@ -101,9 +106,7 @@ export const LanguageSwitch = ({ position }) => {
           LANGUAGES?.map(({ icon, text, code }) => (
             <div
               key={code}
-              onClick={() => {
-                setLanguage(text)
-              }}
+              onClick={() => { setLanguage(text) }}
               className={`w-14 h-10 transition duration-300 leading-9 text-2xl rounded-md m-1 grid place-items-center ${language === text && 'text-yellow-400 bg-blue-600 '}`}
             >
               {icon}

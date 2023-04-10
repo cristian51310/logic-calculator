@@ -13,12 +13,7 @@ const Navbar = (props) => {
     <nav className='sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-gradient-to-r from-blue-400 to-purple-300 dark:from-blue-900 dark:to-purple-800 text-gray-800/90 dark:text-white p-2 backdrop-blur-xl'>
       <div className='ml-[32px]'>
         <p className='shrink text-[33px] capitalize text-navy-700'>
-          <Link
-            to='#'
-            className='font-bold capitalize hover:text-navy-700 '
-          >
-            {brandText}
-          </Link>
+          {brandText}
         </p>
       </div>
 

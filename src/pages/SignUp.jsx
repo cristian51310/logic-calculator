@@ -1,7 +1,6 @@
 import { Button } from '@/components/Button'
 import Formulario from '@/components/Formulario'
 import { NavLink } from 'react-router-dom'
-import Input from '../components/Input'
 import { IoPeopleSharp, IoKey, IoIdCard, IoAtCircle } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
 
@@ -17,26 +16,25 @@ export default function Signup () {
         subtitulo={t('sign_up_welcome')}
       >
 
-        <Input
-          placeholder={t('name_label')}
-          name='name'
-          icon={<IoIdCard className='w-6 h-6' />}
-        />
-        <Input
-          placeholder={t('user_label')}
-          name='user'
-          icon={<IoPeopleSharp className='w-6 h-6' />}
-        />
-        <Input
-          placeholder={t('email_label')}
-          name='email'
-          icon={<IoAtCircle className='w-6 h-6' />}
-        />
-        <Input
-          placeholder={t('password_label')}
-          name='pass'
-          icon={<IoKey className='w-6 h-6' />}
-        />
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoIdCard className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='name' placeholder={t('name_label')} />
+        </div>
+
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoPeopleSharp className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='user' placeholder={t('user_label')} />
+        </div>
+
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoAtCircle className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='email' placeholder={t('email_label')} />
+        </div>
+
+        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
+          <IoKey className='w-6 h-6' />
+          <input className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' type='text' name='password' placeholder={t('password_label')} />
+        </div>
 
         <NavLink to='/auth/login'>
           <Button

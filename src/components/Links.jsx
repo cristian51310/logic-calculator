@@ -12,7 +12,7 @@ export function SidebarLinks (props) {
   const createLinks = (routes) => {
     return routes.map((route, index) => {
       return (
-        <Link key={index} to={route.layout + '/' + route.path}>
+        <Link key={index} to={route.path}>
           <div className='relative mb-3 flex hover:cursor-pointer'>
             <li
               className='my-[18px] flex cursor-pointer items-center px-8'
@@ -24,7 +24,7 @@ export function SidebarLinks (props) {
                       : 'font-medium text-gray-700 dark:text-gray-200'
                   }`}
               >
-                {route.icon ? route.icon : <h1>Icono no encontrado</h1>}{' '}
+                {route.icon}
               </span>
               <p
                 className={`leading-1 ml-4 flex ${

@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button'
 import Formulario from '@/components/Form'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { IoPeopleSharp, IoKey, IoIdCard, IoAtCircle } from 'react-icons/io5'
+import { IoPeopleSharp, IoKey, IoIdCard } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
@@ -12,7 +12,6 @@ export default function Signup () {
   const [user, setUser] = useState({
     name: '',
     user: '',
-    email: '',
     password: ''
   })
 
@@ -46,11 +45,6 @@ export default function Signup () {
         <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
           <IoPeopleSharp className='w-6 h-6' />
           <input onChange={handleChange} type='text' name='user' placeholder={t('user_label')} className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' />
-        </div>
-
-        <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>
-          <IoAtCircle className='w-6 h-6' />
-          <input onChange={handleChange} type='email' name='email' placeholder={t('email_label')} className='pl-4 bg-gray-200 dark:bg-slate-600 outline-none' />
         </div>
 
         <div className='flex items-center border-4 py-2 px-3 rounded-xl border-blue-500'>

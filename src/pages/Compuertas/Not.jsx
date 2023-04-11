@@ -21,7 +21,7 @@ export const Not = () => {
 
   let imagen = null
 
-  if (firstValue === '1') {
+  if (firstValue === '0') {
     imagen = <img src={bulbOn} />
   } else {
     imagen = <img src={bulbOff} />

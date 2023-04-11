@@ -1,6 +1,6 @@
 import SideForm from './SideForm'
 
-export default function Formulario ({ children, titulo, subtitulo, handleSubmit }) {
+export default function Formulario ({ children, titulo, subtitulo }) {
   return (
     <div className=' flex w-full'>
       <SideForm />
@@ -16,9 +16,9 @@ export default function Formulario ({ children, titulo, subtitulo, handleSubmit 
               <p className='text-sm font-normal  mb-5'>{subtitulo}</p>
 
               <div className='py-3 text-base space-y-2 '>
-                <form onSubmit={handleSubmit} className='grid gap-3'>
-                  {children}
-                </form>
+
+                {children}
+
               </div>
             </div>
           </div>

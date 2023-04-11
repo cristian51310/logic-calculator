@@ -12,10 +12,11 @@ export function PrimaryButton ({ titulo, type }) {
   )
 }
 
-export function Button ({ titulo, type }) {
+export function Button ({ titulo, type, disabled }) {
   return (
     <button
       type={type}
+      disabled={disabled}
       className='block bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 text-white py-3 px-3 rounded-lg font-semibold hover:scale-105 transition-all duration-200 w-full shadow-md shadow-indigo-300 dark:shadow-indigo-500 my-3 text-lg'
     >
       {titulo}

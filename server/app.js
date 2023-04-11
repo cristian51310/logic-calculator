@@ -17,6 +17,6 @@ export async function startApolloServer (typeDefs, resolvers) {
 
   app.use('/graphql', cors(), express.json(), expressMiddleware(server))
 
-  await new Promise((resolve) => httpServer.listen({ port: 4002 }, resolve))
-  console.log('🚀🚀🚀 Server ready at http://localhost:4002')
+  await new Promise((resolve) => httpServer.listen({ port: 4003 }, resolve))
+  console.log('🚀🚀🚀 Server ready at http://localhost:4003')
 }

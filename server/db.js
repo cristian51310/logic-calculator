@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 export const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb://127.0.0.1:27017/health-master')
+    const conn = await mongoose.connect('mongodb://127.0.0.1:27017/logic-calculator')
     console.log(`Mongo DB connected ${conn.connection.name}`)
   } catch {
     console.error('Error')

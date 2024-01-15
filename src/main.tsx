@@ -1,21 +1,16 @@
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
-import App from './App';
-import './index.css';
-import "./i18n"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CalculatorLayout from './pages/Calculator';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4003/graphql',
-  cache: new InMemoryCache()
-})
+import './index.css';
 
 const root = createRoot(document.getElementById('root') as HTMLElement).render(
-  <ApolloProvider client={client}>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </ApolloProvider>
+  <BrowserRouter>
+    <Routes>
+      <Route path='*' element={<CalculatorLayout />} />
+      <Route path="/" element={<CalculatorLayout />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 //Remover el loading 

@@ -1,6 +1,5 @@
 import './style.css'
 
-// Esta duncion debe de estar dentro de un display flex
 export function RocketSwitch ({ checked, onChange, value }) {
   return (
     <label className='switch'>
